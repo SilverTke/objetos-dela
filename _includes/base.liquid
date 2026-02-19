@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/uno.css">
+</head>
+<body>
+  <nav class="navbar">
+    <p class="is-size-4 has-text-white">Inmobiliaria Zares</p>
+    <div class="navbar-end">
+        <a class="navbar-item" href="/propiedades_venta.html">En venta</a>
+        <a class="navbar-item" href="/propiedades_alquiler.html">En alquiler</a>
+    </div>
+  </nav>
+  <main>
+    {{ content }}
+  </main>
+  <script src="{% getBundleFileUrl "js" %}"></script>
+</body>
+</html>
+
+

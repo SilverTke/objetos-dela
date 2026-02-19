@@ -1,0 +1,8 @@
+{
+  "markup": {
+  },
+  "excludes": [],
+  "plugins": [
+    "https://plugins.dprint.dev/g-plane/markup_fmt-v0.26.0.wasm"
+  ]
+}

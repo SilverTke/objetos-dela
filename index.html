@@ -1,0 +1,15 @@
+---
+layout: base.liquid
+extra_scripts: [index.js]
+---
+<section>
+  <h1 class="title">En venta</h1>
+  <div id="seccionVenta">
+  </div>
+</section>
+{% js %}
+{% include "propiedades/venta.js" %}
+{% include "index.js" %}
+{% endjs %}
+{% # vim:set ft=liquid: %}
+
