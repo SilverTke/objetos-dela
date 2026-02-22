@@ -1,14 +1,20 @@
 ---
 layout: base.liquid
-extra_scripts: [index.js]
 ---
-<section>
+<section class="uno-overflow-x-scroll">
   <h1 class="title">En venta</h1>
-  <div id="seccionVenta">
+  <div id="seccionVenta" class="uno-flex uno-items-start uno-gap-10 uno-h-full">
   </div>
 </section>
+<section class="uno-overflow-x-scroll">
+  <h1 class="title">En alquiler</h1>
+  <div id="seccionAlquiler" class="uno-flex uno-items-start uno-gap-10 uno-h-full">
+  </div>
+</section>
+
 {% js %}
 {% include "propiedades/venta.js" %}
+{% include "propiedades/alquiler.js" %}
 {% include "index.js" %}
 {% endjs %}
 {% # vim:set ft=liquid: %}

@@ -9,14 +9,14 @@
   <link rel="stylesheet" href="/assets/css/uno.css">
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar uno-h-full">
     <p class="is-size-4 has-text-white">Inmobiliaria Zares</p>
     <div class="navbar-end">
-        <a class="navbar-item" href="/propiedades_venta.html">En venta</a>
-        <a class="navbar-item" href="/propiedades_alquiler.html">En alquiler</a>
+        <a class="navbar-item" href="/propiedades_venta">En venta</a>
+        <a class="navbar-item" href="/propiedades_alquiler">En alquiler</a>
     </div>
   </nav>
-  <main>
+  <main class="uno-overflow-y-scroll">
     {{ content }}
   </main>
   <script src="{% getBundleFileUrl "js" %}"></script>

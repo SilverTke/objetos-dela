@@ -1,0 +1,40 @@
+---
+layout: base.liquid
+---
+<h1 class="title">Propiedades en venta</h1>
+<div id="seccionVenta" class="grid uno-w-full">
+</div>
+
+{% js %}
+{% include "propiedades/venta.js" %}
+const seccionVenta = document.querySelector("#seccionVenta")
+let html = ""
+for (const inmueble of propiedadesVenta) {
+  const smokeText = inmueble.smoke
+    ? `<p class="has-text-success">Permitido fumar</p>`
+    : `<p class="has-text-danger">No se permite fumar</p>`;
+  const petText = inmueble.pets
+    ? `<p class="has-text-success">Mascotas permitidas</p>`
+    : `<p class="has-text-danger">No se permiten mascotas</p>`;
+  html += `
+  <article class="cell card uno-w-96">
+
+    <figure class="card-image uno-w-full">
+      <img class="uno-w-full" src="${inmueble.src}">
+    </figure>
+    <div class="card-content">
+      <h2 class="title">${inmueble.nombre}</h2>
+      <p>${inmueble.descripcion}</p>
+      <p class="uno-text-3xl has-text-white">UF ${inmueble.costo}</p>
+      <p class="has-text-primary-light">${inmueble.ubicacion}</p>
+      <p>${inmueble.habitaciones} ${inmueble.habitaciones === 1 ? "habitación" : "habitaciones"}</p>
+      ${smokeText}
+      ${petText}
+    </div>
+  </article>
+  `; 
+  }
+seccionVenta.innerHTML = html;
+{% endjs %}
+
+{% # vim: set ft=liquid: %}
